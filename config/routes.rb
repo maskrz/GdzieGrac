@@ -1,5 +1,11 @@
 GdzieGrac::Application.routes.draw do
-  resources :aths
+  resources :eplayers
+
+  resources :fields
+
+  resources :events
+
+  resources :players
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

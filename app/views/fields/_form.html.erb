@@ -1,0 +1,41 @@
+<%= form_for(@field) do |f| %>
+  <% if @field.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@field.errors.count, "error") %> prohibited this field from being saved:</h2>
+
+      <ul>
+      <% @field.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_baskets %><br>
+    <%= f.text_field :number_of_baskets %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
