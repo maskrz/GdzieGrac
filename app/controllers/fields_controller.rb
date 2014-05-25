@@ -4,7 +4,7 @@ class FieldsController < ApplicationController
   # GET /fields
   # GET /fields.json
   def index
-    @fields = Field.all
+    @fields = Field.all.order(:name)
     @hash = Gmaps4rails.build_markers(@fields) do |field, marker|
       marker.lat field.latitude
       marker.lng field.longitude

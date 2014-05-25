@@ -35,7 +35,7 @@
 <% end %>
 </p>
 <%= link_to 'Edytuj', edit_event_path(@event) %> |
-<%= link_to 'Powrot', events_path %>
+<%= link_to 'Powrot', events_path, 'data-no-turbolink' => true %>
 
 <br><div style='width: 800px;'>
   <div id="map" style='width: 800px; height: 400px;'></div>
