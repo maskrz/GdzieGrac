@@ -1,13 +1,11 @@
-<h1>Listing players</h1>
+<h1>Lista graczy</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Surname</th>
-      <th>Address</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
+      <th>Imie</th>
+      <th>Nazwisko</th>
+      <th>Adres</th>
       <th></th>
       <th></th>
       <th></th>
@@ -20,11 +18,9 @@
         <td><%= player.name %></td>
         <td><%= player.surname %></td>
         <td><%= player.address %></td>
-        <td><%= player.latitude %></td>
-        <td><%= player.longitude %></td>
-        <td><%= link_to 'Show', player %></td>
-        <td><%= link_to 'Edit', edit_player_path(player) %></td>
-        <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Pokaz', player %></td>
+        <td><%= link_to 'Edytuj', edit_player_path(player) %></td>
+        <td><%= link_to 'Usun', player, method: :delete, data: { confirm: 'Na pewno?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Player', new_player_path %>
+<%= link_to 'Nowy gracz', new_player_path %>

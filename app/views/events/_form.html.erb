@@ -12,18 +12,30 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label "Nazwa" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :date %><br>
-    <%= f.text_field :date %>
+    <%= f.label "Data" %><br>
+    <%= f.date_select :date %>
   </div>
   <div class="field">
-    <%= f.label :time %><br>
-    <%= f.text_field :time %>
+    <%= f.label "Czas" %><br>
+    <%= f.time_select :time %>
   </div>
+  <div class="field">
+    Kto gra:
+  </div>
+  <% @players.each do |player| %>
+  <div class="field">
+  	<%= check_box_tag "post[players_ids][]", player.id, @event.players.include?(player) %>  
+    <%= label_tag(player.id, player.display_name) %></br>
+  </div>
+  <% end %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Zatwierdz" %>
   </div>
+  
+  
+  
 <% end %>

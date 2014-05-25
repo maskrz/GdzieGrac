@@ -5,6 +5,11 @@ class FieldsController < ApplicationController
   # GET /fields.json
   def index
     @fields = Field.all
+    @hash = Gmaps4rails.build_markers(@fields) do |field, marker|
+      marker.lat field.latitude
+      marker.lng field.longitude
+      marker.infowindow field.desc
+    end
   end
 
   # GET /fields/1
