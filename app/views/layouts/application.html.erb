@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= link_to "Index", home_index_path, 'data-no-turbolink' => true %>
 <%= link_to "Wydarzenia", events_path, 'data-no-turbolink' => true %>
 <%= link_to "Boiska", fields_path, 'data-no-turbolink' => true %>
 <%= link_to "Gracze", players_path, 'data-no-turbolink' => true %>

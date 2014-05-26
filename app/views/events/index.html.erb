@@ -18,7 +18,7 @@
         <td><%= event.name %></td>
         <td><%= event.date %></td>
         <td><%= event.time %></td>
-        <td><%= link_to 'Pokaz', event %></td>
+        <td><%= link_to 'Pokaz', event, 'data-no-turbolink' => true %></td>
         <td><%= link_to 'Edytuj', edit_event_path(event) %></td>
         <td><%= link_to 'Usun', event, method: :delete, data: { confirm: 'Na pewno?' } %></td>
       </tr>
