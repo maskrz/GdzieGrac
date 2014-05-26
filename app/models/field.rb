@@ -3,7 +3,7 @@ class Field < ActiveRecord::Base
   after_validation :geocode, :if => :address_changed?
   
   def desc
-    "Koszy: "+ number_of_baskets.to_s
+    name + ", koszy: "+ number_of_baskets.to_s
     
   end
 end
