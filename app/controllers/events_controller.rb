@@ -18,9 +18,9 @@ class EventsController < ApplicationController
       marker.lng field.longitude
       marker.infowindow field.desc
       marker.picture({
-        "url" => "/assets/darkgreen_MarkerB.png",
+        "url" => "/assets/basketballfield.png",
         "width" => 32,
-        "height" => 32
+        "height" => 37
       })
     end
     @hash2 = Gmaps4rails.build_markers(@participants) do |user, marker|
@@ -28,9 +28,9 @@ class EventsController < ApplicationController
       marker.lng user.longitude
       marker.infowindow user.display_name
       marker.picture({
-        "url" => "/assets/blue_MarkerG.png",
+        "url" => "/assets/male.png",
         "width" => 32,
-        "height" => 32
+        "height" => 37
       })
     end
     @hash.concat @hash2

@@ -9,6 +9,11 @@ class FieldsController < ApplicationController
       marker.lat field.latitude
       marker.lng field.longitude
       marker.infowindow field.desc
+      marker.picture({
+        "url" => "/assets/basketballfield.png",
+        "width" => 32,
+        "height" => 37
+      })
     end
   end
 
